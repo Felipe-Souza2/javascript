@@ -14,19 +14,16 @@
     function checarNacionalidade() {
       var pais = window.document.querySelector('input#pais')
       var nacionalidade = window.document.getElementById('nacionalidade')
-      //console.log(pais)
-      // var resultado = ""
-     // console.log(nacionalidade)
-      //console.log(pais.value)
+      var resultado = ""
       nacionalidade.innerHTML = 'voce e : '
       if (pais.value == 'brasil') {
         nacionalidade.innerHTML += 'brazuca!'
-        // resultado = `brasuca `
+        resultado = `brasuca `
       } else {
-         nacionalidade.innerHTML += 'gringo!'
-        // resultado = `gringo `
+        nacionalidade.innerHTML += 'gringo!'
+        resultado = `gringo `
       }
-      // nacionalidade.innerHTML = `voce e: ${resultado}`
+       nacionalidade.innerHTML = `voce e: ${resultado}`
     }
 
   </script>
