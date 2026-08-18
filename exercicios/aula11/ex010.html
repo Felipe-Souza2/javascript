@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ibge</title>
+</head>
+<body>
+  <h1>sua pais e de onde voce e</h1>
+  <input type="text" name="pais" id="pais">
+  <input type="button" value="verificar" onclick="checarNacionalidade()">
+  <div id="nacionalidade"></div>
+  <script>
+    function checarNacionalidade() {
+      var pais = window.document.querySelector('input#pais')
+      var nacionalidade = window.document.getElementById('nacionalidade')
+      //console.log(pais)
+      // var resultado = ""
+     // console.log(nacionalidade)
+      //console.log(pais.value)
+      nacionalidade.innerHTML = 'voce e : '
+      if (pais.value == 'brasil') {
+        nacionalidade.innerHTML += 'brazuca!'
+        // resultado = `brasuca `
+      } else {
+         nacionalidade.innerHTML += 'gringo!'
+        // resultado = `gringo `
+      }
+      // nacionalidade.innerHTML = `voce e: ${resultado}`
+    }
+
+  </script>
+  
+</body>
+</html>

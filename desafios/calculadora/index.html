@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculadora</title>
+  <style>
+    #texto {
+      width:20px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <input type="number" name="number1" id="number1">
+  <input type="number" name="number2" id="number2">
+  <span id="resultado"></span>
+  <br>
+  <br>
+  <button onclick="somar()">+</button>
+  <button onclick="subtrair()">-</button>
+  <button onclick="multiplicar()">x</button>
+  <button onclick="dividir()">/</button>
+  <button onclick="limpar()">C</button><br>
+
+
+  <script>
+    function somar() {
+      var number1 = window.document.getElementById('number1').value
+      var number2 = window.document.getElementById('number2').value
+      var resultado = window.document.getElementById('resultado')
+      var total = Number(number1) + Number(number2)
+      resultado.innerHTML = total
+    }
+
+    function subtrair() {
+      var number1 = window.document.getElementById('number1').value
+      var number2 = window.document.getElementById('number2').value
+      var resultado = window.document.getElementById('resultado')
+      var total = Number(number1) - Number(number2)
+      resultado.innerHTML = total 
+    }
+
+    function multiplicar() {
+      var number1 = window.document.getElementById('number1').value
+      var number2 = window.document.getElementById('number2').value
+      var resultado = window.document.getElementById('resultado')
+      var total = Number(number1) * Number(number2)
+      resultado.innerHTML = total 
+    }
+     function dividir() {
+      var number1 = window.document.getElementById('number1').value
+      var number2 = window.document.getElementById('number2').value
+      var resultado = window.document.getElementById('resultado')
+      if (number2 == 0) {
+        resultado.innerHTML = 'voce e burro'
+      } else {
+        var total = Number(number1) / Number(number2)
+        resultado.innerHTML = total 
+      }      
+    }
+
+    function limpar() {
+      window.document.getElementById('number1').value = ''
+      window.document.getElementById('number2').value = ''
+      window.document.getElementById('resultado').innerHTML = ''
+    }
+    
+    
+    
+  </script>
+
+  
+</body>
+</html>
