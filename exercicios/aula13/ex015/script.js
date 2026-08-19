@@ -33,7 +33,7 @@ function verificadorIdade() {
       } else if (idade < 50) {
         img.setAttribute('src', 'imagens/adulto-m.png')
       } else  {
-        img.setAttribute('src', 'imagens/idoso-m.png')
+        img.setAttribute('src', 'imagens/idosa-m.png')
       }
      
     }
