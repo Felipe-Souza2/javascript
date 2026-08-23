@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora IMC</title>
+  <style>
+    * {
+      margin: auto;
+    }
+     table {
+     border-collapse: collapse;
+     width: 300px;
+    }
+    
+    td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .show {
+      display: block !important;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #error {
+      display: none;
+      color:red;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <label for="peso">Peso:</label>
+  <input type="number" name="peso" id="peso" required placeholder="999"><br>
+  <br>
+  <label for="altura">Altura:</label>
+  <input type="number" name="altura" id="altura" required placeholder="1.50"><br>
+  <br>
+  <button onclick="execute()">Calcular</button>
+  <button onclick="clearFn()">Limpar</button>
+  <br>
+  <br>
+  <div id="resultado"></div>
+  <br>
+  <br>
+  <div id="error">Error</div>
+
+  <table id="imcTable" class="hidden">
+    <th>faixa</th>
+    <th>IMC</th>
+    <tr>
+      <td>Abaixo do peso</td>
+      <td>Menor que 18.5</td>
+    </tr>
+    <tr>
+      <td>Peso normal</td>
+      <td>de 18.5 ate 24.5</td>
+    </tr>
+    <tr>
+      <td>Sobrepeso</td>
+      <td>de 25 ate 29.9</td>
+    </tr>
+    <tr>
+      <td>Obesidade</td>
+      <td>30 ou mais</td>
+    </tr>
+  </table>
+
+  <script src="calculateImc.js" type="module"></script>
+  <script src="clear.js" type="module"></script>
+</body>
+</html>
