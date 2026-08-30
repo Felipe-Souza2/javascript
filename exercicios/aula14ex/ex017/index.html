@@ -8,14 +8,17 @@
 </head>
 <body>
   <header>
-    <h1>Hora do dia</h1>
-  </header>
+    <h1>Multiplication tables</h1>
+  </header> 
   <section>
-    <div>
-      <p>agora sao 9horas</p>
+    <div id="selectBox">
+      <p><label for="multiplicationNumber">Number:</label></p>
+      <p><input type="number" name="number" id="multiplicationNumber"> 
+      <input type="button" value="Generate Multiplication" onclick="multiplicationTables()"></p>
     </div>
     <div>
-      ola
+      <option>Enter a number above</option>
+     <select name="multiplication" id="selectMultiplication" size="10"></select>
     </div>
   </section>
   <footer>
